@@ -1,25 +1,30 @@
 <!-- php -->
 <?php
-class Movie
-{
-    public $title;
+//*Collegamento a movie.php (ispeziona file).
+require_once __DIR__ . '/movie.php';
 
-    public $genre;
-
-    public $year;
-
-}
-
-$LOTR = new Movie();
+//todo: variabili d'istanza $LOTR, $HP, $Avengers
+$LOTR = new Movie("The Lord of the rings", "Fantasy", "2001");
+/* $LOTR = new Movie();
 $LOTR->title = "The Lord of the rings";
 $LOTR->genre = "Fantasy";
-$LOTR->year = "2001";
+$LOTR->year = "2001"; */
 
-$HP = new Movie();
-$HP->title = "Harry Potter";
-$HP->genre = "Fantasy";
-$HP->year = "2001"
-    ?>
+$HP = new Movie("Harry Potter", "Fantasy", "2001");
+
+$Avengers = new Movie("Avengers", "Adventure", "2012");
+
+/* echo ($HP->getDescription()); */
+
+//* Creo un comodo array che contenga tutti i film
+$Movies = [
+    $LOTR,
+    $HP,
+    $Avengers,
+];
+?>
+
+
 
 
 <!-- HTML -->
@@ -36,6 +41,14 @@ $HP->year = "2001"
 </head>
 
 <body>
+    <ul>
+        <!--* stampo dinamicamente la descrizione dei film tramite metodo-->
+        <?php foreach ($Movies as $Movie): ?>
+            <li>
+                <?php echo $Movie->getDescription() ?>
+            </li>
+        <?php endforeach; ?>
+    </ul>
 </body>
 
 </html>
