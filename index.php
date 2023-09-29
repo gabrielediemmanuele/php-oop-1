@@ -1,15 +1,22 @@
 <!-- php -->
 <?php
 //*Collegamento a movie.php (ispeziona file).
-require_once __DIR__ . '/movies.php';
 require_once __DIR__ . '/genre.php';
+require_once __DIR__ . '/movies.php';
+
+//todo: variabili del Genre
+
+$movie_genre1 = new Genre("Fantasy");
+$movie_genre2 = new Genre("Adventure");
+
 
 //todo: variabili d'istanza $LOTR, $HP, $Avengers
-$LOTR = new Movie("The Lord of the rings", "Fantasy, Action, Adventure", "2001");
+$LOTR = new Movie("The Lord of the rings", $movie_genre1, "2001");
 
-$HP = new Movie("Harry Potter", "Fantasy, Action, Adventure", "2001");
+$HP = new Movie("Harry Potter", $movie_genre2, "2001");
 
-$Avengers = new Movie("Avengers", "Fantasy, Action, Adventure", "2012");
+$Avengers = new Movie("Avengers", $movie_genre1, "2012");
+
 
 
 

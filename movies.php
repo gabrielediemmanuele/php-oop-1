@@ -13,7 +13,7 @@ class Movie
     public function __construct(
         //* affermo che sono stringe
         string $title,
-        string $genre,
+        Genre $genre,
         string $year
     ) {
         //*li trasformo in stringhe
@@ -25,7 +25,7 @@ class Movie
     //* tramite metodo, creo la stringa della descrizione completa del film.
     public function getDescription()
     {
-        return "$this->title, $this->genre, $this->year";
+        return $this->title . " " . $this->genre->genre . " " . $this->year;
     }
 
 }
