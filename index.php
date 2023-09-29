@@ -1,5 +1,25 @@
 <!-- php -->
-<?php ?>
+<?php
+class Movie
+{
+    public $title;
+
+    public $genre;
+
+    public $year;
+
+}
+
+$LOTR = new Movie();
+$LOTR->title = "The Lord of the rings";
+$LOTR->genre = "Fantasy";
+$LOTR->year = "2001";
+
+$HP = new Movie();
+$HP->title = "Harry Potter";
+$HP->genre = "Fantasy";
+$HP->year = "2001"
+    ?>
 
 
 <!-- HTML -->
