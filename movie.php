@@ -11,10 +11,12 @@ class Movie
 
     //* con __construct costruisco le stringhe dei miei film (come prova).
     public function __construct(
+        //* affermo che sono stringe
         string $title,
         string $genre,
         string $year
     ) {
+        //*li trasformo in stringhe
         $this->title = $title;
         $this->genre = $genre;
         $this->year = $year;
