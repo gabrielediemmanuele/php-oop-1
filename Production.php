@@ -7,16 +7,12 @@ class Production
 
     public $genre;
 
-    public $year;
-
     public function __construct(
         string $title,
         Genre $genre,
-        string $year
     ) {
         $this->title = $title;
         $this->genre = $genre;
-        $this->year = $year;
     }
 
     public function getTitle()
@@ -26,7 +22,7 @@ class Production
 
     public function getDescription()
     {
-        return $this->title . " " . $this->genre->genre . " " . $this->year;
+        return $this->title . " " . $this->genre->genre;
     }
 
 
