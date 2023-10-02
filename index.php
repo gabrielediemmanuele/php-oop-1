@@ -12,29 +12,18 @@ $movie_genre1 = new Genre("Fantasy");
 $movie_genre2 = new Genre("Adventure");
 
 
-//todo: variabili d'istanza $LOTR, $HP, $Avengers
-$LOTR = new Movie("The Lord of the rings", $movie_genre1, "2001");
+$Products = [
 
-$HP = new Movie("Harry Potter", $movie_genre2, "2001");
-
-$Avengers = new Movie("Avengers", $movie_genre1, "2012");
-
-
-
-
-/* echo ($HP->getDescription()); */
-/* $LOTR = new Movie();
-$LOTR->title = "The Lord of the rings";
-$LOTR->genre = "Fantasy";
-$LOTR->year = "2001"; */
-
-//* Creo un comodo array che contenga tutti i film
-$Movies = [
-    $LOTR,
-    $HP,
-    $Avengers,
+    new Movie(),
+    new TvSerie(),
 ];
+
 ?>
+
+
+
+
+
 
 
 
