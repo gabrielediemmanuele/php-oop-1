@@ -8,14 +8,14 @@ require_once __DIR__ . '/Media/TvSerie.php';
 
 //todo: variabili del Genre
 
-$movie_genre1 = new Genre("Fantasy");
-$movie_genre2 = new Genre("Adventure");
+$product_genre1 = new Genre("Fantasy");
+$product_genre2 = new Genre("Adventure");
+$product_genre3 = new Genre("Science fiction");
 
 
 $Products = [
-
-    new Movie(),
-    new TvSerie(),
+    new Movie("The Lord of the Ring", $product_genre1, "300 ", "2001"),
+    new TvSerie("Fringe", $product_genre3, "2009", "2013", "100", "5"),
 ];
 
 ?>
