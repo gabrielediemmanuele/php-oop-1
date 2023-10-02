@@ -35,8 +35,9 @@ class TvSerie extends Production
         <strong>Genre:</strong> {$this->genre->genre}, <br> 
         <strong>First Episode:</strong> $this->first_episode, <br>
         <strong>Last Episode:</strong> $this->last_episode, <br>
-        <strong>Episodes:</strong> $this->episodes_numbere, <br>
-        <strong>Seasons:</strong> $this->seasons_number <br>";
+        <strong>Episodes:</strong> $this->episodes_number, <br>
+        <strong>Seasons:</strong> $this->seasons_number
+        <hr>";
     }
 }
 ?>

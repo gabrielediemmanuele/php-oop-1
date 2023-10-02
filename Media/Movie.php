@@ -31,7 +31,8 @@ class Movie extends Production
         <strong>Title:</strong> $this->title, <br>
         <strong>Genre:</strong> {$this->genre->genre}, <br> 
         <strong>Running Time:</strong> $this->running_time $minuts, <br>
-        <strong>Published Year:</strong> $this->published_year <br>";
+        <strong>Published Year:</strong> $this->published_year <br>
+        <hr>";
     }
 }
 ?>

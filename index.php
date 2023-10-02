@@ -21,13 +21,6 @@ $Products = [
 ?>
 
 
-
-
-
-
-
-
-
 <!-- HTML -->
 <!DOCTYPE html>
 <html lang="en">
@@ -44,9 +37,10 @@ $Products = [
 <body>
     <ul>
         <!--* stampo dinamicamente la descrizione dei film tramite metodo-->
-        <?php foreach ($Movies as $Movie): ?>
+        <?php foreach ($Products as $Product): ?>
             <li>
-                <?php echo $Movie->getDescription() ?>
+                <h3>Product</h3>
+                <?php echo $Product->getDescription() ?>
             </li>
         <?php endforeach; ?>
     </ul>
