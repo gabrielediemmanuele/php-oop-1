@@ -1,16 +1,16 @@
 <?php
-//* creo una classe TvSerie */
+//* Class TvSerie extended to "Production" Production.php
 class TvSerie extends Production
 {
-    //* ASSEGNO alla classe, degli attributi
+    //* Add to class specific attribute about tv series.
     public $aired_from_year;
     public $aired_to_year;
     public $number_of_episodes;
     public $number_of_seasons;
 
-    //* con __construct costruisco le stringhe dei miei film (come prova).
+
     public function __construct(
-        //* affermo che sono stringe
+        //* confirm the type
         string $title,
         Genre $genre,
         string $aired_from_year,
@@ -18,7 +18,7 @@ class TvSerie extends Production
         string $number_of_episodes,
         string $number_of_seasons
     ) {
-        //*li trasformo in stringhe
+        //*transform to string (call the parent general attributes)
         parent::__construct($title, $genre);
         $this->first_episode = $aired_from_year;
         $this->last_episode = $aired_to_year;
@@ -26,7 +26,7 @@ class TvSerie extends Production
         $this->seasons_number = $number_of_seasons;
     }
 
-    //* tramite metodo, creo la stringa della descrizione completa del film.
+    //* With the function i build the string merging with the father (Production)
     public function getDescription()
     {
         return

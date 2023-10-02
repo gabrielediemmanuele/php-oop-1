@@ -1,13 +1,12 @@
 <!-- php -->
 <?php
-//*Collegamento a movie.php (ispeziona file).
+//*Collegamenti ai vari file.
 require_once __DIR__ . '/Composition/Genre.php';
 require_once __DIR__ . '/Media/Production.php';
 require_once __DIR__ . '/Media/Movie.php';
 require_once __DIR__ . '/Media/TvSerie.php';
 
 //todo: variabili del Genre
-
 $product_genre1 = new Genre("Fantasy");
 $product_genre2 = new Genre("Adventure");
 $product_genre3 = new Genre("Science fiction");
@@ -15,22 +14,23 @@ $product_genre4 = new Genre("Drama");
 $product_genre5 = new Genre("Action");
 
 
+//*Creo due array separati
 
+//*MOVIES
 $Products_Movies = [
     new Movie("The Lord of the Ring", $product_genre2, "208 ", "2001"),
     new Movie("Avatar", $product_genre1, "178 ", "2009"),
     new Movie("Jhon Wick 4", $product_genre5, "169 ", "2023"),
 ];
 
+//*TV SERIES
 $Products_TvSeries = [
     new TvSerie("Fringe", $product_genre3, "2009", "2013", "100", "5"),
     new TvSerie("이태원 클라쓰", $product_genre4, "31/01/2020", "21/03/2020", "16", "1"),
     new TvSerie("Stranger Things", $product_genre3, "2016", "Working On", "34", "4"),
     new TvSerie("The Boys", $product_genre1, "2019", "Working On", "24", "3"),
 ];
-
 ?>
-
 
 <!-- HTML -->
 <!DOCTYPE html>
@@ -51,8 +51,10 @@ $Products_TvSeries = [
 </head>
 
 <body>
+    <!-- Container principale -->
     <div class="container mt-3 mb-3">
         <div class="row g-3">
+            <!-- MOVIES CARDS -->
             <h1 class="text-danger">Movies</h1>
             <?php foreach ($Products_Movies as $Movies): ?>
                 <div class="col-3">
@@ -64,6 +66,7 @@ $Products_TvSeries = [
                 </div>
             <?php endforeach; ?>
             <hr>
+            <!-- TV SERIES CARDS -->
             <h1 class="text-danger">Tv Series</h1>
             <?php foreach ($Products_TvSeries as $Series): ?>
                 <div class="col-3">

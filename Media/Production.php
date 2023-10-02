@@ -1,29 +1,22 @@
 <?php
-//* classe Production */
+//* Class Production */
 class Production
 {
-    //* ASSEGNO alla classe, degli attributi
+    //* Add to class, general attribute in common to movies and tv series
     public $image;
     public $title;
 
     public $genre;
 
-
+    //* Construction 
     public function __construct(
-
         string $title,
         Genre $genre
     ) {
-
         $this->title = $title;
         $this->genre = $genre;
     }
-
-    public function getTitle()
-    {
-        return $this->title;
-    }
-
+    //* From a function build the string title + genre
     public function getDescription()
     {
         return $this->title . " " . $this->genre->genre;

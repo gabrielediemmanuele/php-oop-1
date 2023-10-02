@@ -1,16 +1,16 @@
 <?php
-//* creo una classe Genre */
+//* Create Class Genre
 class Genre
 {
-    //* ASSEGNO alla classe, degli attributi
+    //* Add to class attribute.
     public $genre;
 
-    //* con __construct costruisco le stringhe dei miei film (come prova).
+    //* Add to the attribute a type.
     public function __construct(
-        //* affermo che è una stringa
+        //* Confirm the type.
         string $genre,
     ) {
-        //*li trasformo in stringhe
+        //* Transform to string with construct.
         $this->genre = $genre;
     }
 }
