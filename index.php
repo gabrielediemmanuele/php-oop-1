@@ -2,7 +2,9 @@
 <?php
 //*Collegamento a movie.php (ispeziona file).
 require_once __DIR__ . '/Composition/Genre.php';
-require_once __DIR__ . '/Composition/Movies.php';
+require_once __DIR__ . '/Media/Production.php';
+require_once __DIR__ . '/Media/Movie.php';
+require_once __DIR__ . '/Media/TvSerie.php';
 
 //todo: variabili del Genre
 
