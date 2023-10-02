@@ -1,8 +1,8 @@
 <!-- php -->
 <?php
 //*Collegamento a movie.php (ispeziona file).
-require_once __DIR__ . '/genre.php';
-require_once __DIR__ . '/movies.php';
+require_once __DIR__ . '/Genre.php';
+require_once __DIR__ . '/Movies.php';
 
 //todo: variabili del Genre
 
