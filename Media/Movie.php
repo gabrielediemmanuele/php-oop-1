@@ -11,6 +11,7 @@ class Movie extends Production
     //* con __construct costruisco le stringhe dei miei film (come prova).
     public function __construct(
         //* affermo che sono stringe
+
         string $title,
         Genre $genre,
         string $running_time,
@@ -28,11 +29,11 @@ class Movie extends Production
         $minuts = self::$time_unit;
         return
             "
+        
         <strong>Title:</strong> $this->title, <br>
         <strong>Genre:</strong> {$this->genre->genre}, <br> 
         <strong>Running Time:</strong> $this->running_time $minuts, <br>
-        <strong>Published Year:</strong> $this->published_year <br>
-        <hr>";
+        <strong>Published Year:</strong> $this->published_year";
     }
 }
 ?>

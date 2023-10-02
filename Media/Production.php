@@ -3,14 +3,18 @@
 class Production
 {
     //* ASSEGNO alla classe, degli attributi
+    public $image;
     public $title;
 
     public $genre;
 
+
     public function __construct(
+
         string $title,
-        Genre $genre,
+        Genre $genre
     ) {
+
         $this->title = $title;
         $this->genre = $genre;
     }
@@ -24,7 +28,5 @@ class Production
     {
         return $this->title . " " . $this->genre->genre;
     }
-
-
 }
 ?>
