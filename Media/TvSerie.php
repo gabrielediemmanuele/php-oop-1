@@ -3,40 +3,45 @@
 class TvSerie extends Production
 {
     //* Add to class specific attribute about tv series.
-    public $aired_from_year;
-    public $aired_to_year;
-    public $number_of_episodes;
-    public $number_of_seasons;
+    public $first_episode;
+    public $last_episode;
+    public $episodes_number;
+    public $seasons_number;
 
 
     public function __construct(
         //* confirm the type
+        string $image,
         string $title,
         Genre $genre,
-        string $aired_from_year,
-        string $aired_to_year,
-        string $number_of_episodes,
-        string $number_of_seasons
+        string $language,
+        string $first_episode,
+        string $last_episode,
+        string $episodes_number,
+        string $seasons_number
     ) {
         //*transform to string (call the parent general attributes)
-        parent::__construct($title, $genre);
-        $this->first_episode = $aired_from_year;
-        $this->last_episode = $aired_to_year;
-        $this->episodes_number = $number_of_episodes;
-        $this->seasons_number = $number_of_seasons;
+        parent::__construct($image, $title, $genre, $language);
+        $this->first_episode = $first_episode;
+        $this->last_episode = $last_episode;
+        $this->episodes_number = $episodes_number;
+        $this->seasons_number = $seasons_number;
     }
 
     //* With the function i build the string merging with the father (Production)
     public function getDescription()
     {
-        return
+        return parent::getDescription() .
             "
-        <strong>Title:</strong> $this->title, <br>
-        <strong>Genre:</strong> {$this->genre->genre}, <br> 
-        <strong>First Episode:</strong> $this->first_episode, <br>
-        <strong>Last Episode:</strong> $this->last_episode, <br>
-        <strong>Episodes:</strong> $this->episodes_number, <br>
+        <strong>First Episode:</strong> $this->first_episode <br>
+        <strong>Last Episode:</strong> $this->last_episode <br>
+        <strong>Episodes:</strong> $this->episodes_number <br>
         <strong>Seasons:</strong> $this->seasons_number";
+    }
+
+    public function getImage()
+    {
+        return $this->image;
     }
 }
 ?>

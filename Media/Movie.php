@@ -11,13 +11,15 @@ class Movie extends Production
     //* Add to all the attribute a type
     public function __construct(
         //* confirm the type
+        string $image,
         string $title,
         Genre $genre,
+        string $language,
         string $running_time,
         string $published_year
     ) {
         //*transform to string (call the parent general attributes)
-        parent::__construct($title, $genre);
+        parent::__construct($image, $title, $genre, $language);
         $this->running_time = $running_time;
         $this->published_year = $published_year;
     }
@@ -26,13 +28,15 @@ class Movie extends Production
     public function getDescription()
     {
         $minuts = self::$time_unit;
-        return
+        return parent::getDescription() .
             "
-        
-        <strong>Title:</strong> $this->title, <br>
-        <strong>Genre:</strong> {$this->genre->genre}, <br> 
-        <strong>Running Time:</strong> $this->running_time $minuts, <br>
+        <strong>Running Time:</strong> $this->running_time $minuts <br>
         <strong>Published Year:</strong> $this->published_year";
+    }
+
+    public function getImage()
+    {
+        return $this->image;
     }
 }
 ?>
